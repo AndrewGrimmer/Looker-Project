@@ -42,6 +42,12 @@ view: omi {
     sql: ${TABLE}.message ;;
   }
 
+  dimension: cluster_id {
+    description: "Cluster ID"
+    type: string
+    sql: ${TABLE}.cluster_id;;
+  }
+
   measure: severitycount{
     type: count
     drill_fields: [severity]
